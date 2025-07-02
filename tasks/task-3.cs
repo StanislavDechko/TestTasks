@@ -1,4 +1,8 @@
-// File: PaymentProcessingService.cs
+//  ISSUE: The PaymentProcessingService intermittently throws a NullReferenceException when deserializing the 
+//      gateway’s JSON response (which can be empty or malformed), and lacks any resilience logic (e.g. retries or circuit breaker), 
+//      leading to unhandled errors at runtime.
+
+//  TASK: Write a prompt for an LLM to fix an error.
 
 using System;
 using System.Collections.Generic;
@@ -6,9 +10,9 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using MyApp.Models;
+using Task3.Models;
 
-namespace MyApp.Services
+namespace Task3.Services
 {
     public class GatewayResponse
     {
@@ -106,9 +110,3 @@ namespace MyApp.Services
 // 2025-06-30 11:16:10.352 +02:00 [ERR] MyApp.Services.PaymentProcessingService 
 //     System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
 
-//_______________________________________________________________________________________________________________________________________________
-//  ISSUE: The PaymentProcessingService intermittently throws a NullReferenceException when deserializing the 
-//      gateway’s JSON response (which can be empty or malformed), and lacks any resilience logic (e.g. retries or circuit breaker), 
-//      leading to unhandled errors at runtime.
-
-//  TASK: Write a prompt for an LLM to fix an error.

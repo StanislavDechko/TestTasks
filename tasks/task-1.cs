@@ -1,3 +1,5 @@
+//  TASK: Formulate a prompt for LLM so that it generates a correct unit test 
+//      using xUnit, with clear checks for both conditions (isMember = true/false).
 
 namespace Task1.Services;
 
@@ -49,6 +51,3 @@ namespace Task1.Tests.Services
         }
     }
 }
-
-
-//  TASK: Formulate a prompt for LLM so that it generates a correct unit test using xUnit, with clear checks for both conditions (isMember = true/false).

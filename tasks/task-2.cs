@@ -1,15 +1,18 @@
+//  TASK: formulate a detailed prompt for LLM to generate markdown documentation for this service, 
+//      for example use markdown documentation from the example below.
+
 using System;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 using FirebaseAdmin.Messaging;
 using Microsoft.Extensions.Logging;
-using MyApp.Models;
-using MyApp.Settings;
+using Task2.Models;
+using Task2.Settings;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 
-namespace MyApp.Services
+namespace Task2.Services
 {
     public interface INotificationService
     {
