@@ -16,7 +16,8 @@ A service for converting documents between formats (PDF, DOCX, HTML) and extract
 | `ExtractTextAsync(inputBytes, options)`          | Extracts plain text from a document.               | `Task<ConversionResult>`      |
 
 # Examples
-**C# usage:**
+
+## C# Usage
 ```csharp
 // Convert DOCX to PDF
 var pdfResult = await documentService.ConvertToPdfAsync(
@@ -35,25 +36,35 @@ var textResult = await documentService.ExtractTextAsync(
     new ConversionOptions { PreserveLayout = false }
 );
 // textResult.OutputText contains the extracted string
+```
 
+## API Example (cURL)
+```bash
 curl -X POST https://api.myapp.com/convert/pdf \
   -H "Content-Type: application/octet-stream" \
   --data-binary @presentation.html \
   --header "X-Options: {\"PageSize\":\"Letter\"}"
-# Expected JSON:
-# {
-#   "isSuccess": true,
-#   "errorCode": null,
-#   "errorMessage": null,
-#   "outputBytes": "<base64-encoded PDF>"
-# }
+```
 
-# Error codes
-// ConversionError	General conversion failure
-// UnsupportedFormat	Input format not supported
-// ValidationError	Input content failed validation (e.g., corrupt)
+### Expected JSON Response
+```json
+{
+  "isSuccess": true,
+  "errorCode": null,
+  "errorMessage": null,
+  "outputBytes": "<base64-encoded PDF>"
+}
+```
 
-# YAML‑front‑matter: metadata  
-# Sections in order: Overview, API Reference, Examples, Error Codes, Models  
-# Tables: API Reference and Error Codes  
-# Code blocks: ```csharp``` and ```bash```  
+# Error Codes
+| Code              | Description                          |
+|-------------------|--------------------------------------|
+| ConversionError   | General conversion failure           |
+| UnsupportedFormat | Input format not supported           |
+| ValidationError   | Input content failed validation (e.g., corrupt) |
+
+# Notes
+- YAML‑front‑matter: metadata  
+- Sections in order: Overview, API Reference, Examples, Error Codes, Models  
+- Tables: API Reference and Error Codes  
+- Code blocks: `csharp`, `bash`, and `json`  
