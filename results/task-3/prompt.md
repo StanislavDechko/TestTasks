@@ -1,0 +1,2 @@
+you are a senior .NET software engineer. you need to fix an error in The PaymentProcessingService which is intermittently throwing a NullReferenceException when deserializing the gateway’s JSON response (which can be empty or malformed), and lacks any resilience logic (e.g. retries or circuit breaker), leading to unhandled errors at runtime.
+analyzed @task-3.cs. Write down possible reasons for the error then propose solutions to fix it. Analyze those solutions and peek the best. Then introduce them

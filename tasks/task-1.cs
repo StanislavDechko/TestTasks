@@ -3,6 +3,13 @@
 
 namespace Task1.Services;
 
+public class DiscountResult
+{
+    public int DiscountPercent { get; set; }
+    public int FinalAmount { get; set; }
+    public int BonusPoints { get; set; }
+}
+
 public class OrderService
 {
     public DiscountResult CalculateOrder(int totalAmount, bool isMember, int itemsCount)

@@ -1,0 +1,2 @@
+You are a senior technical writer. You need to write a documentation for @task-2.cs. 
+As a reference you must use @task-2.documentationExample.md. Analyze @task-2.documentationExample.md and explain step by step each portion of information you need to know to create as detailed documentation as possible. After analysis is finished put the result in task-2.md
