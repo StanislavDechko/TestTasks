@@ -1,8 +1,0 @@
-Prompt:
-
-You are working in a C# project using .NET 7 and the xUnit testing framework, with FluentAssertions for assertions. The project follows standard C# naming conventions and organizes tests in the `Task1.Tests.Services` namespace, as shown in the existing test `CalculateShipping_ReturnsFree_WhenWeightUnderThreshold`.
-
-Write a comprehensive unit test class for the `OrderService.CalculateOrder` method:
-`public DiscountResult CalculateOrder(int totalAmount, bool isMember, int itemsCount)`
-
-Cover all possible logical branches and edge cases in `CalculateOrder`, including negative `totalAmount` (should throw an exception), all combinations of `isMember` (true/false) and relevant `totalAmount` thresholds (such as `>1000`, `>5000`), and calculation of `BonusPoints` for both member and non-member scenarios. Follow the naming and structure conventions of the project, as seen in the provided test example. Use clear, descriptive test method names that indicate the scenario being tested. Use xUnit `[Fact]` or `[Theory]` attributes as appropriate. Use FluentAssertions for all assertions. Ensure the test class is placed in the correct namespace: `Task1.Tests.Services`. Specify any required using directives. Target .NET 7 and ensure compatibility with the project's package versions. Reference the existing test `CalculateShipping_ReturnsFree_WhenWeightUnderThreshold` for style and structure.
